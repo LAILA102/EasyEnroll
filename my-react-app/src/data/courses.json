@@ -1,0 +1,586 @@
+[
+  {
+    "course name": "CHEM 115L/1015 - General Chemistry Laboratory (1 cr.)",
+    "prereq": "Thanawiya Amma Science or equivalent.",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "ENGR 000/2105 - Engineering Mechanics (3 cr.)",
+    "prereq": "MACT 1122, PHYS 1011\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "ENGR 345/3222 - Engineering Economy (3 cr.)",
+    "prereq": "MACT 1121\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "MACT 132/1122 - Calculus II (3 cr.)",
+    "prereq": "MACT 1121 \u00a0\u00a0or exemption.",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "MACT 231/2123 - Calculus III (3 cr.)",
+    "prereq": "MACT 1122",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "MACT 200/2131 - Discrete Mathematics (3 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "MACT 1121\u00a0\u00a0(concurrent or exemption)",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "MACT 240/2132 - Linear Algebra (3 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "MACT 1122\u00a0or concurrent",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "MACT 233/2141 - Differential Equations (3 cr.)",
+    "prereq": "MACT 1122\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "MACT 317/3224 - Probability and Statistics (3 cr.)",
+    "prereq": "MACT 1122\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "PHYS 111/1011 - Physics 1: Classical Mechanics, Sound and Heat (3 cr.)",
+    "prereq": "MACT 1121",
+    "prereq or concurrent": "NaN",
+    "concurrent": "PHYS 1012",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "PHYS 123L/1012 - General Physics Laboratory I (1 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "NaN",
+    "concurrent": "Concurrent with PHYS 1011",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "PHYS 112/1021 - Physics 2: Electricity and Magnetism (3 cr.)",
+    "prereq": "PHYS 1011, PHYS 1012 ",
+    "prereq or concurrent": "MACT 1122",
+    "concurrent": "PHYS 1022",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "PHYS 124L/1022 - General Physics Laboratory II (1 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "NaN",
+    "concurrent": "PHYS 1021",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "PHYS 215/2211 - Introduction to Electronics (3 cr.)",
+    "prereq": "PHYS 1021",
+    "prereq or concurrent": "NaN",
+    "concurrent": "PHYS 2213\u00a0",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "PHYS 222L/2213 - Electronics Lab (1 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "NaN",
+    "concurrent": "PHYS 2211\u00a0",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 106/1001 - Fundamentals of Computing I (3 cr.)",
+    "prereq": "College level preparation course in Mathematics or MACT 1111",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 110/1101 - Fundamentals of Computing II (3 cr.)",
+    "prereq": "CSCE 1001\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "\u00a0CSCE 1102\u00a0 (not for ECNG students)",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 000/1102 - Fundamentals of Computing II Lab (1 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "NaN",
+    "concurrent": "CSCE 1101\u00a0",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 321/2202 - Analysis and Design of Algorithms (3 cr.)",
+    "prereq": "CSCE 2211\u00a0",
+    "prereq or concurrent": "MACT 2131",
+    "concurrent": "CSCE 2203\u00a0",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 000/2203 - Analysis and Design of Algorithms Lab (1 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "MACT 2131\u00a0",
+    "concurrent": "\u00a0CSCE 2202",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 000/2211 - Applied Data Structures (3 cr.)",
+    "prereq": "CSCE 1101\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 230/2301 - Digital Design I (3 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "PHYS 2211",
+    "concurrent": "CSCE 2302.",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 239L/2302 - Digital Design I Lab (1 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "NaN",
+    "concurrent": " CSCE 2301",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 231/2303 - Computer Organization and Assembly Language Programming (3 cr.)",
+    "prereq": "CSCE 1101\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "CSCE 2301\u00a0or\u00a0ECNG 2101",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 253/2501 - Fundamentals of Database Systems (3 cr.)",
+    "prereq": "CSCE 1101\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 330/3301 - Computer Architecture (3 cr.)",
+    "prereq": "(CSCE 2301 or ECNG 2101), CSCE 2303 ",
+    "prereq or concurrent": "NaN",
+    "concurrent": "CSCE 3302",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 339L/3302 - Computer Architecture Lab (1 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "NaN",
+    "concurrent": "CSCE 3301",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 332/3303 - Fundamental Microelectronics (3 cr.)",
+    "prereq": "PHYS 2211\u00a0",
+    "prereq or concurrent": "CSCE 2301",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 337/3304 - Digital Design II (3 cr.)",
+    "prereq": "CSCE 2301 , CSCE 3303 .",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 435/3312 - Computer Networks (3 cr.)",
+    "prereq": "PHYS 2211, (MACT 3211\u00a0or\u00a0MACT 3224)",
+    "prereq or concurrent": "NaN",
+    "concurrent": "CSCE 3313\u00a0",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 439L/3313 - Computer Networks Lab (1 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "NaN",
+    "concurrent": "CSCE 3312.",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 345/3401 - Operating Systems (3 cr.)",
+    "prereq": "CSCE 2303 and CSCE 2211 ",
+    "prereq or concurrent": "NaN",
+    "concurrent": "CSCE 3402\u00a0",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 000/3402 - Operating Systems Lab (1 cr.)",
+    "prereq": "CSCE 1101\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "CSCE 3401\u00a0",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 363/3611 - Digital Signal Processing (3 cr.)",
+    "prereq": "PHYS 2211",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "Junior Standing"
+  },
+  {
+    "course name": "CSCE 341/3701 - Software Engineering (3 cr.)",
+    "prereq": "CSCE 1101\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 432/4301 - Embedded Systems (3 cr.)",
+    "prereq": "CSCE 3301,\u00a0CSCE 3401,\u00a0CSCE 3312",
+    "prereq or concurrent": "NaN",
+    "concurrent": "CSCE 4302",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 438L/4302 - Embedded Systems Lab (1 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "NaN",
+    "concurrent": "CSCE 4301",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 445/4411 - Fundamentals of Distributed Systems (3 cr.)",
+    "prereq": "CSCE 3401",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 490/4950 - Industrial Training (1 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "Junior standing and  instructor approval"
+  },
+  {
+    "course name": "CSCE 491/4980 - Senior Project I (1 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "Instructor approval"
+  },
+  {
+    "course name": "CSCE 492/4981 - Senior Project II (2 cr.)",
+    "prereq": "CSCE 4980\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 315/3101 - Programming Language (1-3 cr.)",
+    "prereq": "CSCE 1001\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 316/3102 - Programming in Java (3 cr.)",
+    "prereq": "CSCE 1101\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 317/3103 - Object Oriented Programming (3 cr.)",
+    "prereq": "CSCE 1101\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 325/3104 - Concepts of Programming Languages (3 cr.)",
+    "prereq": "CSCE 1101\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 333/3311 - Data and Computer Communications (3 cr.)",
+    "prereq": "CSCE 1101,  PHYS 2211 ",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 465/3601 - Fundamentals of Artificial Intelligence (3 cr.)",
+    "prereq": "CSCE 2202\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 447/4101 - Compiler Design (3 cr.)",
+    "prereq": "CSCE 3104",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 422/4201 - Theory of Computing (3 cr.)",
+    "prereq": "MACT 2131",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "Senior Standing"
+  },
+  {
+    "course name": "CSCE 000/4303 - Embedded Systems on Chip Design (3 cr.)",
+    "prereq": "CSCE 3304, CSCE 4301\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 437/4313 - Local and Metropolitan Area Networks (3 cr.)",
+    "prereq": "CSCE 3311",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 436L/4314 - Local Area Networks Lab (1 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "NaN",
+    "concurrent": "CSCE 4313",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 000/4315 - Internet of Things Networking Protocols (3 cr.)",
+    "prereq": "CSCE 2202\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 446/4421 - Computer Security (3 cr.)",
+    "prereq": "CSCE 3401",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 453/4501 - Database Systems (3 cr.)",
+    "prereq": "CSCE 2501\u00a0",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 456/4502 - Design of Web-based Systems (3 cr.)",
+    "prereq": "CSCE 2501 (or MOIS for MICT students)",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 427/4602 - Introduction to Artificial Neural Networks (3 cr.)",
+    "prereq": "CSCE 1101 , MACT 2123, MACT 2132 ",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 000/4603 - Fundamentals of Computer Vision (3 cr.)",
+    "prereq": "CSCE 1101",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 000/4604 - Practical Machine Deep Learning (3 cr.)",
+    "prereq": "CSCE 2202, MACT 1122 ",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 455/4621 - Computer Graphics (3 cr.)",
+    "prereq": "CSCE 1101 , MACT 2132 ",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 441/4701 - Object-Oriented Analysis and Design (3 cr.)",
+    "prereq": "CSCE 3701",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 448/4702 - Secure Systems Engineering (3 cr.)",
+    "prereq": "CSCE 3701 and CSCE 3401 ",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CSCE 495/4910 - Guided Studies in Computer Science and Engineering (1-3 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "Instructor Approval"
+  },
+  {
+    "course name": "CSCE 485/4930 - Selected Topics in Computer Science and Engineering (1-3 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "Junior Standing"
+  },
+  {
+    "course name": "ECNG 413/4103 - Testing of Digital Circuits (3 cr.)",
+    "prereq": "ECNG 2101",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "ECNG 494/4930 - Selected Topics in Electronics and Communications Engineering (3 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "Sebuir Standing"
+  },
+  {
+    "course name": "MACT 304/3143 - Numerical Methods (3 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": " CSCE 1001, MACT 2141, MACT 2132 ",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "MACT 362/4133 - Formal and Mathematical Logic (3 cr.)",
+    "prereq": "MACT 2131",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "MACT 403/4134 - Modern Algebra (3 cr.)",
+    "prereq": "MACT 2131 ,MACT 2132 , or consent of instructor.",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "Instructor Approval (bypasses prereqs)"
+  },
+  {
+    "course name": "MACT 440/4135 - Graph Theory (3 cr.)",
+    "prereq": "MACT 2131",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "MACT 406/4212 - Stochastic Processes (3 cr.)",
+    "prereq": "MACT 2132,\u00a0MACT 2141, (\u00a0MACT 3211\u00a0or\u00a0MACT 3224\u00a0)",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "MGMT 307/3201 - Management Fundamentals (3 cr.)",
+    "prereq": "NaN",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  },
+  {
+    "course name": "CHEM 105/1005 - General Chemistry I (3 cr.)",
+    "prereq": "Thanawiya Amma Science or equivalent.",
+    "prereq or concurrent": "NaN",
+    "concurrent": "NaN",
+    "time requirement": "NaN",
+    "Approval": "NaN"
+  }
+]
