@@ -40,7 +40,7 @@ const parseDependencies = (dependencyString) => {
   )
     return [];
 
-  // Regular expression to match course codes (e.g., "MACT 1122")
+  // Regular expression to match course codes (e.g., 'MACT 1122')
   const courseCodeRegex = /[A-Z]{2,4}\s*\d{3,4}/g;
 
   const matches = dependencyString.match(courseCodeRegex);
@@ -290,6 +290,17 @@ function App() {
     checkAllDependencies(semesterCourses);
   }, [semesterCourses, checkAllDependencies]);
 
+  // Search state for unassigned courses
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Group semesters into rows (excluding 'Unassigned')
+  const assignedSemesters = semesters.filter((s) => s !== "Unassigned");
+  const semesterGroups = [
+    assignedSemesters.slice(0, 4),
+    assignedSemesters.slice(4, 8),
+    assignedSemesters.slice(8),
+  ];
+
   return (
     <div className="App">
       {errorMessages.length > 0 && (
@@ -301,18 +312,35 @@ function App() {
         </div>
       )}
       <DragDropContext onDragEnd={onDragEnd}>
-        <div className="semesters-container">
-          {semesters.map((semester) => (
-            <Droppable droppableId={semester} key={semester}>
+        <div className="main-container">
+          {/* Unassigned Column */}
+          <div className="unassigned-column">
+            <div className="unassigned-header">
+              <h2>Unassigned</h2>
+              {/* Search Input */}
+              <input
+                type="text"
+                placeholder="Search courses..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="search-input"
+              />
+            </div>
+            <Droppable droppableId="Unassigned">
               {(provided) => (
                 <div
-                  className="semester-column"
+                  className="unassigned-content"
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                 >
-                  <h2>{semester}</h2>
-                  {semesterCourses.semesterData[semester].map(
-                    (course, index) => (
+                  {/* Filtered Unassigned Courses */}
+                  {semesterCourses.semesterData["Unassigned"]
+                    .filter((course) =>
+                      course["course name"]
+                        .toLowerCase()
+                        .includes(searchQuery.toLowerCase())
+                    )
+                    .map((course, index) => (
                       <Draggable
                         key={course.id}
                         draggableId={course.id}
@@ -333,13 +361,60 @@ function App() {
                           </div>
                         )}
                       </Draggable>
-                    )
-                  )}
+                    ))}
                   {provided.placeholder}
                 </div>
               )}
             </Droppable>
-          ))}
+          </div>
+          {/* Semesters Container */}
+          <div className="semesters-container">
+            {/* Render Semesters in Rows */}
+            {semesterGroups.map((group, groupIndex) => (
+              <div className="semester-row" key={`group-${groupIndex}`}>
+                {group.map((semester) => (
+                  <Droppable droppableId={semester} key={semester}>
+                    {(provided) => (
+                      <div
+                        className="semester-column"
+                        ref={provided.innerRef}
+                        {...provided.droppableProps}
+                      >
+                        <h2>{semester}</h2>
+                        {semesterCourses.semesterData[semester].map(
+                          (course, index) => (
+                            <Draggable
+                              key={course.id}
+                              draggableId={course.id}
+                              index={index}
+                            >
+                              {(provided) => (
+                                <div
+                                  ref={provided.innerRef}
+                                  {...provided.draggableProps}
+                                  {...provided.dragHandleProps}
+                                >
+                                  <CourseCard
+                                    course={course}
+                                    hasError={errorMessages.some((error) =>
+                                      error.includes(
+                                        `"${course["course name"]}"`
+                                      )
+                                    )}
+                                  />
+                                </div>
+                              )}
+                            </Draggable>
+                          )
+                        )}
+                        {provided.placeholder}
+                      </div>
+                    )}
+                  </Droppable>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </DragDropContext>
     </div>
