@@ -3,11 +3,15 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import coursesData from "./data/courses.json";
+import takenCoursesData from "./data/takenCourses.json"; // Import the taken courses data
 import CourseCard from "./components/CourseCard";
 import "./App.css";
 
 // Helper function to normalize course codes
-const normalizeCode = (code) => code.trim().toUpperCase();
+const normalizeCode = (code) => {
+  // Remove all extra spaces and convert to uppercase
+  return code.replace(/\s+/g, " ").trim().toUpperCase();
+};
 
 // Function to extract and normalize course codes from course name
 const extractCourseCodes = (courseName) => {
@@ -31,6 +35,25 @@ const extractCourseCodes = (courseName) => {
   return [];
 };
 
+// Function to extract and normalize course codes from the "course" field in takenCoursesData
+const extractTakenCourseCodes = (courseStr) => {
+  // Remove any extra spaces
+  const codePart = courseStr.trim();
+  // Extract prefix and numbers
+  const prefixMatch = codePart.match(/^([A-Z]+)\s*(.*)/i);
+  if (prefixMatch) {
+    const prefix = prefixMatch[1].trim(); // e.g., "ENGR"
+    const numbersPart = prefixMatch[2].trim(); // e.g., "345/3222"
+    // Split numbers by '/'
+    const numbers = numbersPart.split("/").map((num) => num.trim());
+    // Reconstruct course codes
+    return numbers.map((num) => normalizeCode(`${prefix} ${num}`));
+  } else {
+    // If no prefix, return the codePart as is
+    return [normalizeCode(codePart)];
+  }
+};
+
 // Updated function to parse and normalize any dependency string
 const parseDependencies = (dependencyString) => {
   if (
@@ -41,7 +64,7 @@ const parseDependencies = (dependencyString) => {
     return [];
 
   // Regular expression to match course codes (e.g., 'MACT 1122')
-  const courseCodeRegex = /[A-Z]{2,4}\s*\d{3,4}/g;
+  const courseCodeRegex = /[A-Z]{2,4}\s*\d{3,4}[A-Z]?/g;
 
   const matches = dependencyString.match(courseCodeRegex);
   if (matches) {
@@ -64,6 +87,15 @@ function App() {
     "Summer 2026",
   ];
 
+  // Assume the current user is already signed in
+  const currentUser = "ahmedmohamed@aucegypt.edu";
+
+  // Extract taken course codes from takenCoursesData for the current user
+  const takenCourseCodes = takenCoursesData
+    .filter((entry) => entry.username === currentUser)
+    .map((entry) => extractTakenCourseCodes(entry.course))
+    .flat();
+
   // Initialize course code map and semester courses
   const [semesterCourses, setSemesterCourses] = useState(() => {
     const courseCodeMap = {};
@@ -84,10 +116,18 @@ function App() {
       };
     });
 
+    // Remove taken courses from coursesWithIds
+    const coursesNotTaken = coursesWithIds.filter((course) => {
+      // Check if any of the course's codes are in takenCourseCodes
+      return !course.courseCodes.some((code) =>
+        takenCourseCodes.includes(code)
+      );
+    });
+
     // Save the course code map to state
     return {
       semesterData: {
-        Unassigned: coursesWithIds,
+        Unassigned: coursesNotTaken,
         "Fall 2023": [],
         "Spring 2024": [],
         "Summer 2024": [],
@@ -103,6 +143,11 @@ function App() {
   });
 
   const [errorMessages, setErrorMessages] = useState([]);
+
+  // Function to check if a course code has been taken
+  const isCourseCodeTaken = (code) => {
+    return takenCourseCodes.includes(code);
+  };
 
   // Function to check dependencies for all courses
   const checkAllDependencies = useCallback(
@@ -135,6 +180,10 @@ function App() {
 
           // Helper function to find if a course code is scheduled
           const isCourseCodeScheduled = (code, semestersToCheck) => {
+            // First, check if the course is taken
+            if (isCourseCodeTaken(code)) {
+              return true;
+            }
             for (const sem of semestersToCheck) {
               if (sem === "Unassigned") continue; // Exclude 'Unassigned' semester
               const semCourses = semesterCourses.semesterData[sem];
@@ -154,8 +203,13 @@ function App() {
           const prereqCodes = parseDependencies(course.prereq);
           if (prereqCodes.length > 0) {
             for (const prereqCode of prereqCodes) {
-              // Check if the prereq code exists in the course code map
-              if (!(prereqCode in semesterCourses.courseCodeMap)) {
+              // Check if the prereq code exists in the course code map or has been taken
+              if (
+                !(
+                  prereqCode in semesterCourses.courseCodeMap ||
+                  isCourseCodeTaken(prereqCode)
+                )
+              ) {
                 // Skip if the course code doesn't exist
                 continue;
               }
@@ -177,8 +231,13 @@ function App() {
           const coreqCodes = parseDependencies(course.concurrent);
           if (coreqCodes.length > 0) {
             for (const coreqCode of coreqCodes) {
-              // Check if the coreq code exists in the course code map
-              if (!(coreqCode in semesterCourses.courseCodeMap)) {
+              // Check if the coreq code exists in the course code map or has been taken
+              if (
+                !(
+                  coreqCode in semesterCourses.courseCodeMap ||
+                  isCourseCodeTaken(coreqCode)
+                )
+              ) {
                 // Skip if the course code doesn't exist
                 continue;
               }
@@ -201,8 +260,13 @@ function App() {
           );
           if (prereqCoreqCodes.length > 0) {
             for (const code of prereqCoreqCodes) {
-              // Check if the code exists in the course code map
-              if (!(code in semesterCourses.courseCodeMap)) {
+              // Check if the code exists in the course code map or has been taken
+              if (
+                !(
+                  code in semesterCourses.courseCodeMap ||
+                  isCourseCodeTaken(code)
+                )
+              ) {
                 // Skip if the course code doesn't exist
                 continue;
               }
@@ -228,7 +292,7 @@ function App() {
 
       setErrorMessages(newErrorMessages);
     },
-    [setErrorMessages, semesterCourses.courseCodeMap]
+    [setErrorMessages, semesterCourses.courseCodeMap, takenCourseCodes]
   );
 
   // Handle drag and drop events
