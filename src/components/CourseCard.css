@@ -1,8 +1,26 @@
 /* src/components/CourseCard.css */
+
 .course-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
   padding: 10px;
-  margin: 5px;
-  background-color: #f0f8ff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  cursor: grab;
+}
+
+.course-card:hover {
+  background-color: #f9f9f9;
+}
+
+.course-card:active {
+  cursor: grabbing;
+}
+
+.course-error {
+  border-color: red;
+}
+
+.course-error:hover {
+  background-color: #ffe6e6;
 }

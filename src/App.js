@@ -1,4 +1,5 @@
 // src/App.js
+
 import React, { useState, useEffect, useCallback } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import coursesData from "./data/courses.json";
@@ -54,8 +55,13 @@ function App() {
     "Unassigned",
     "Fall 2023",
     "Spring 2024",
+    "Summer 2024",
     "Fall 2024",
     "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
   ];
 
   // Initialize course code map and semester courses
@@ -84,8 +90,13 @@ function App() {
         Unassigned: coursesWithIds,
         "Fall 2023": [],
         "Spring 2024": [],
+        "Summer 2024": [],
         "Fall 2024": [],
         "Spring 2025": [],
+        "Summer 2025": [],
+        "Fall 2025": [],
+        "Spring 2026": [],
+        "Summer 2026": [],
       },
       courseCodeMap, // Map of course codes to course data
     };
@@ -102,8 +113,13 @@ function App() {
       const semesterOrder = {
         "Fall 2023": 1,
         "Spring 2024": 2,
-        "Fall 2024": 3,
-        "Spring 2025": 4,
+        "Summer 2024": 3,
+        "Fall 2024": 4,
+        "Spring 2025": 5,
+        "Summer 2025": 6,
+        "Fall 2025": 7,
+        "Spring 2026": 8,
+        "Summer 2026": 9,
       };
 
       // For each scheduled course (excluding 'Unassigned'), check its dependencies
@@ -278,10 +294,10 @@ function App() {
     <div className="App">
       {errorMessages.length > 0 && (
         <div className="error-messages">
+          <button onClick={() => setErrorMessages([])}>Clear All Errors</button>
           {errorMessages.map((error, index) => (
             <p key={index}>{error}</p>
           ))}
-          <button onClick={() => setErrorMessages([])}>Clear Errors</button>
         </div>
       )}
       <DragDropContext onDragEnd={onDragEnd}>
@@ -308,7 +324,12 @@ function App() {
                             {...provided.draggableProps}
                             {...provided.dragHandleProps}
                           >
-                            <CourseCard course={course} />
+                            <CourseCard
+                              course={course}
+                              hasError={errorMessages.some((error) =>
+                                error.includes(`"${course["course name"]}"`)
+                              )}
+                            />
                           </div>
                         )}
                       </Draggable>

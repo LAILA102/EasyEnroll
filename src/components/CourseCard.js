@@ -1,13 +1,15 @@
 // src/components/CourseCard.js
+
 import React from "react";
 import "./CourseCard.css";
 
-const CourseCard = ({ course }) => {
+function CourseCard({ course, hasError }) {
   return (
-    <div className="course-card">
-      <h4>{course["course name"]}</h4>
+    <div className={`course-card ${hasError ? "course-error" : ""}`}>
+      <h3>{course["course name"]}</h3>
+      {/* Include additional course details if needed */}
     </div>
   );
-};
+}
 
 export default CourseCard;
